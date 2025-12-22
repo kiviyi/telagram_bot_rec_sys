@@ -152,6 +152,7 @@ def build_user_prompt(user_query: str) -> str:
     }
     return json.dumps(payload, ensure_ascii=False, indent=2)
 
+
 def extract_filters_openai(
     user_query: str,
     *,
