@@ -34,7 +34,7 @@ class RecomendationService:
         return sorted(candidates, key=lambda x: (x['rating_cnt'], x['rating_avg']), reverse=True)
 
     
-    def rank_places(self, user_id: int, candidates: List[int]) -> List[dict[int, float]]:
+    def rank_places(self, user_id: int, candidates: List[dict]) -> List[dict[int, float]]:
         if self.__is_user_cold_start(user_id):
             cold_candidates = [
                 {
